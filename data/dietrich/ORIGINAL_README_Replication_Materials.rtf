@@ -1,0 +1,129 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\margb1417\margt1417\vieww12200\viewh17140\viewkind1
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 README \'97 REPLICATION FILE\
+May 29 2020\
+\
+This folder contains all replication materials for:  Dietrich, Milner and Slapin \'93From Text to Political Positions on Foreign Aid: Analysis of Aid Mentions in Party Manifestos from 1960 to 2015\'94\
+\
+All analysis was performed in Stata SE v15.1  \
+\
+Please place all materials in a single folder and set your working directory to that folder. \
+\
+The \'93input folder\'94 contains all raw data required. Files are a follows: \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 1) Manifesto_rawcoding.dta \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 contains the coding of the manifesto foreign policy sentences, each by two coders (c1 and c2). The variables are as follows: \
+\
+cty: Country name\
+partyid: Partyid from manifesto data\
+year: election year when manifesto was written\
+Passage: the text of the sentence being coded. \
+aid_c1/c2: 0 if the sentence is not about aid; 1 if the sentence is about aid\
+proaid_c1/c2: 1 if the sentence is a pro aid mention, zero otherwise\
+negaid_c1/c2: 1 if the sentence is a negative aid mention, zero otherwise\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 2) ntokens
+\f0\b0  \
+contains total word counts and sentence counts for manifestos taken from CMP/Manifesto project \
+\
+
+\f1\b 3)
+\f0\b0  
+\f1\b cmp_election.dta\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 Election and ideology/position data from CMP/Manifesto project\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 4) Parlgov.dta 
+\f0\b0 \
+Parlgov data downloaded from parlgov.org (ideology, seat shares, cabinet info etc)\
+\
+
+\f1\b 5) CRSAGG.dta
+\f0\b0 \
+Contains main aid data\
+\
+
+\f1\b 6) gtdallaggregate.dta\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 Contains terrorist attack info
+\f1\b \
+
+\f0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 7) wdi.xls\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 World Development Indicators GDP data
+\f1\b \
+
+\f0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 8) wdi_umemp.xls\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 World Development Indicators Unemployment data
+\f1\b \
+\
+9) wdi_expend.xls\
+
+\f0\b0 World Development Indicators Gov Expenditure data
+\f1\b \
+\
+10) populationWDI.xls\
+
+\f0\b0 World Development Indicators Population data
+\f1\b \
+\
+11) oecd_immig.xlsx\
+
+\f0\b0 OECD Immigration data
+\f1\b \
+\
+12) OECD dac comm and disbursment\
+
+\f0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 13) yearly disaster deaths 1980-2017.dta\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \
+All tables and figures found in the paper are saved to the output folder. \
+\
+Please run the do files in the correct order as labeled (File 1, File 2, File 3). Each file is extensively documented. \
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 Germany.dta\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 German public opinion data used to calculate cross tabs for Tables F1-F3 in the appendix. \
+\
+Please run the corresponding do file "replication Tables F1-F3"\
+\
+\
+\
+\
+\
+\
+}

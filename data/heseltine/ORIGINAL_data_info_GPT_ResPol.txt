@@ -1,0 +1,14 @@
+###Data file and script information for "Large Language Models as a Substitute for Human Experts in Annotating Political Text"
+
+Results_Percentages_Combined - combined accuracy scores for all countries and all classification tasks
+cands2022trimmed.csv - candidate data for 2022 congresisonal primary candidates, key variables retained
+ResPolPrePrimaryTweetsFile.csv - tweet data for 2022 candidates
+Results_F1_Combined - comvined f1 scores (alternate to accuracy percentages, for appendix figures)
+
+codinganalysis.r - main R script for plotting main accuracy results in manuscript (figures 1-3). Also includes F1 plots for appendix.
+PrimaryAnalysis_Final.r - R script for plotting 2022 candidate tweet trends and predictive models (figures 4-7)
+
+###python validation metrics script and data
+
+GPT_Coding_Classification_Reports.ipynb - python script to produce classification reports for every country/task combination
+Validation datasets (8 files: Chile, German, Italy, plus 5 split US/English _val files) - Human and GPT coding data for validation metrics
