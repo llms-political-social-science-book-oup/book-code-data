@@ -1,0 +1,11 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "condition": "prompting_zeroshot_openai",
+  "n_valid": 301,
+  "n_invalid": 0,
+  "accuracy": 0.3555,
+  "prec_macro": 0.3352,
+  "rec_macro": 0.3349,
+  "f1_macro": 0.3096,
+  "f1_weighted": 0.3508
+}

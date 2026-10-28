@@ -1,0 +1,13 @@
+{
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "condition": "prompting_fewshot_deepinfra",
+  "n_valid": 2919,
+  "n_invalid": 0,
+  "prec_civil": 0.9159,
+  "rec_civil": 0.7566,
+  "f1_civil": 0.8286,
+  "prec_uncivil": 0.3495,
+  "rec_uncivil": 0.653,
+  "f1_uncivil": 0.4553,
+  "f1_macro": 0.642
+}

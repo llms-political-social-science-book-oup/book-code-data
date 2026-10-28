@@ -1,0 +1,13 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "condition": "prompting_zeroshot_deepinfra",
+  "n_valid": 8793,
+  "n_invalid": 2,
+  "prec_nonpopulist": 0.875,
+  "rec_nonpopulist": 0.7398,
+  "f1_nonpopulist": 0.8017,
+  "prec_populist": 0.5854,
+  "rec_populist": 0.7766,
+  "f1_populist": 0.6676,
+  "f1_macro": 0.7347
+}

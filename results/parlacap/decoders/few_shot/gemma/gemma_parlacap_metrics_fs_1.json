@@ -1,0 +1,33 @@
+{
+  "model": "google/gemma-4-31B-it",
+  "condition": "prompting_fewshot_deepinfra",
+  "n_valid": 3443,
+  "n_invalid": 0,
+  "f1_macro": 0.6882,
+  "f1_weighted": 0.6744,
+  "accuracy": 0.6718,
+  "f1_per_class": {
+    "Macroeconomics": 0.5553,
+    "Civil Rights": 0.5873,
+    "Health": 0.8623,
+    "Agriculture": 0.8383,
+    "Labor": 0.7417,
+    "Education": 0.8099,
+    "Environment": 0.7583,
+    "Energy": 0.8333,
+    "Immigration": 0.6436,
+    "Transportation": 0.8261,
+    "Law and Crime": 0.6391,
+    "Social Welfare": 0.5993,
+    "Housing": 0.7072,
+    "Domestic Commerce": 0.6466,
+    "Defense": 0.72,
+    "Technology": 0.8225,
+    "Foreign Trade": 0.6457,
+    "International Affairs": 0.5397,
+    "Government Operations": 0.4545,
+    "Public Lands": 0.6905,
+    "Culture": 0.6592,
+    "Other": 0.5607
+  }
+}

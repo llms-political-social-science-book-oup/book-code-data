@@ -1,0 +1,19 @@
+{
+  "model": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+  "condition": "prompting_zeroshot_deepinfra",
+  "n_valid": 1211,
+  "n_invalid": 0,
+  "prec_0": 0.766,
+  "rec_0": 0.4045,
+  "f1_0": 0.5294,
+  "prec_1": 0.4025,
+  "rec_1": 0.5333,
+  "f1_1": 0.4588,
+  "prec_2": 0.6252,
+  "rec_2": 0.7629,
+  "f1_2": 0.6872,
+  "prec_3": 0.6512,
+  "rec_3": 0.125,
+  "f1_3": 0.2097,
+  "f1_macro": 0.4713
+}

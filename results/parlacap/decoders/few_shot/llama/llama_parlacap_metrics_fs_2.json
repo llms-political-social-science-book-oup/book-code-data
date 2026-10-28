@@ -1,0 +1,33 @@
+{
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "condition": "prompting_fewshot_deepinfra",
+  "n_valid": 3443,
+  "n_invalid": 0,
+  "f1_macro": 0.6332,
+  "f1_weighted": 0.6205,
+  "accuracy": 0.616,
+  "f1_per_class": {
+    "Macroeconomics": 0.5444,
+    "Civil Rights": 0.5114,
+    "Health": 0.838,
+    "Agriculture": 0.7651,
+    "Labor": 0.6144,
+    "Education": 0.7811,
+    "Environment": 0.748,
+    "Energy": 0.8117,
+    "Immigration": 0.6256,
+    "Transportation": 0.7941,
+    "Law and Crime": 0.5722,
+    "Social Welfare": 0.5896,
+    "Housing": 0.658,
+    "Domestic Commerce": 0.5333,
+    "Defense": 0.6644,
+    "Technology": 0.7677,
+    "Foreign Trade": 0.6881,
+    "International Affairs": 0.5225,
+    "Government Operations": 0.4045,
+    "Public Lands": 0.4608,
+    "Culture": 0.5,
+    "Other": 0.5348
+  }
+}

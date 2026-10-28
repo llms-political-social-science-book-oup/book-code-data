@@ -1,0 +1,13 @@
+{
+  "model": "openai/gpt-5.5",
+  "condition": "prompting_fewshot_openai",
+  "n_valid": 2919,
+  "n_invalid": 0,
+  "prec_civil": 0.9389,
+  "rec_civil": 0.7204,
+  "f1_civil": 0.8153,
+  "prec_incivil": 0.3542,
+  "rec_incivil": 0.7659,
+  "f1_incivil": 0.4844,
+  "f1_macro": 0.6498
+}

@@ -1,0 +1,13 @@
+{
+  "model": "google/gemma-4-31B-it",
+  "condition": "prompting_fewshot_deepinfra",
+  "n_valid": 2195,
+  "n_invalid": 0,
+  "prec_not_negative": 0.9877,
+  "rec_not_negative": 0.7661,
+  "f1_not_negative": 0.8629,
+  "prec_negative": 0.6247,
+  "rec_negative": 0.976,
+  "f1_negative": 0.7618,
+  "f1_macro": 0.8124
+}

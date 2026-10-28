@@ -1,0 +1,19 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "condition": "prompting_zeroshot_deepinfra",
+  "n_valid": 1211,
+  "n_invalid": 0,
+  "prec_0": 0.7931,
+  "rec_0": 0.2584,
+  "f1_0": 0.3898,
+  "prec_1": 0.4188,
+  "rec_1": 0.2792,
+  "f1_1": 0.335,
+  "prec_2": 0.616,
+  "rec_2": 0.4438,
+  "f1_2": 0.5159,
+  "prec_3": 0.354,
+  "rec_3": 0.8661,
+  "f1_3": 0.5026,
+  "f1_macro": 0.4358
+}

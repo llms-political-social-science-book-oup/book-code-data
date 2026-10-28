@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-31B-it",
+  "condition": "prompting_zeroshot_deepinfra",
+  "n_valid": 3624,
+  "n_invalid": 0,
+  "prec_populist": 0.8248,
+  "rec_populist": 0.511,
+  "f1_populist": 0.631,
+  "prec_pluralist": 0.8584,
+  "rec_pluralist": 0.3652,
+  "f1_pluralist": 0.5124,
+  "prec_neutral": 0.4317,
+  "rec_neutral": 0.8761,
+  "f1_neutral": 0.5784,
+  "f1_macro": 0.574
+}

@@ -1,0 +1,23 @@
+,Agriculture,Civil Rights,Culture,Defense,Domestic Commerce,Education,Energy,Environment,Foreign Trade,Government Operations,Health,Housing,Immigration,International Affairs,Labor,Law and Crime,Macroeconomics,Other,Public Lands,Social Welfare,Technology,Transportation
+Agriculture,81,5,0,0,7,0,0,9,8,24,6,0,0,2,1,1,4,2,2,2,1,0
+Civil Rights,0,79,4,0,0,3,1,1,1,17,2,0,3,4,3,1,1,0,0,17,4,0
+Culture,0,2,54,0,1,0,0,0,0,14,0,0,0,2,0,1,3,0,0,0,0,0
+Defense,0,5,4,77,0,0,0,7,0,36,2,0,1,21,1,13,5,1,0,4,0,1
+Domestic Commerce,4,6,15,0,87,2,0,5,1,40,5,3,0,0,1,7,10,0,0,3,1,0
+Education,0,5,4,0,0,107,0,1,0,18,1,0,1,0,3,1,2,1,0,0,2,0
+Energy,0,0,0,0,9,0,103,15,1,14,0,0,0,2,1,0,5,2,2,0,1,0
+Environment,0,0,0,0,1,0,0,89,0,8,2,0,0,4,0,1,0,2,3,0,1,1
+Foreign Trade,2,0,0,0,10,0,0,0,67,14,0,1,0,4,0,3,5,1,0,0,2,1
+Government Operations,1,9,8,3,11,2,2,3,0,154,2,1,4,7,3,12,14,1,7,14,0,2
+Health,0,0,0,0,0,0,0,0,0,6,121,0,0,2,4,0,0,1,0,6,0,0
+Housing,4,1,1,0,9,1,1,5,0,18,0,56,2,0,1,11,8,0,16,10,0,1
+Immigration,1,1,0,0,1,1,0,0,0,12,0,1,50,0,0,3,3,1,0,0,0,0
+International Affairs,3,11,3,1,7,0,1,3,8,29,2,0,12,72,0,5,10,2,1,4,2,5
+Labor,1,0,1,0,6,4,0,0,0,14,0,0,1,0,81,1,7,0,0,29,1,0
+Law and Crime,0,5,2,0,16,5,0,0,2,36,4,1,6,1,5,106,3,0,2,1,2,0
+Macroeconomics,4,0,0,4,33,0,1,3,3,31,0,0,7,1,8,1,96,1,1,10,1,3
+Other,3,11,7,2,2,2,0,1,1,193,2,0,0,6,2,7,1,13,0,0,1,0
+Public Lands,1,1,42,0,6,0,0,36,0,15,0,0,0,0,0,1,4,0,26,1,0,8
+Social Welfare,0,3,0,0,0,1,1,0,0,10,4,0,1,1,6,1,8,0,0,84,1,1
+Technology,0,3,12,1,5,0,0,1,0,34,2,0,0,2,1,1,1,0,1,1,108,0
+Transportation,0,0,0,0,4,1,2,1,0,10,0,0,1,2,0,3,2,1,0,0,0,105

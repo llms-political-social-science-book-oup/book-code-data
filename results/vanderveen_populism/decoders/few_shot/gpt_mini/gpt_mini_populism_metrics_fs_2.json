@@ -1,0 +1,16 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "condition": "prompting_fewshot_openai",
+  "n_valid": 3624,
+  "n_invalid": 0,
+  "prec_populist": 0.8815,
+  "rec_populist": 0.4087,
+  "f1_populist": 0.5584,
+  "prec_pluralist": 0.8116,
+  "rec_pluralist": 0.3337,
+  "f1_pluralist": 0.4729,
+  "prec_neutral": 0.4025,
+  "rec_neutral": 0.9037,
+  "f1_neutral": 0.557,
+  "f1_macro": 0.5294
+}

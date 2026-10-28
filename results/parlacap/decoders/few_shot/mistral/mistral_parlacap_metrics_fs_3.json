@@ -1,0 +1,33 @@
+{
+  "model": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+  "condition": "prompting_fewshot_deepinfra",
+  "n_valid": 3443,
+  "n_invalid": 0,
+  "f1_macro": 0.6106,
+  "f1_weighted": 0.5919,
+  "accuracy": 0.5835,
+  "f1_per_class": {
+    "Macroeconomics": 0.5246,
+    "Civil Rights": 0.5404,
+    "Health": 0.8522,
+    "Agriculture": 0.7535,
+    "Labor": 0.6667,
+    "Education": 0.7547,
+    "Environment": 0.6552,
+    "Energy": 0.7885,
+    "Immigration": 0.6375,
+    "Transportation": 0.7656,
+    "Law and Crime": 0.5714,
+    "Social Welfare": 0.5935,
+    "Housing": 0.6429,
+    "Domestic Commerce": 0.5,
+    "Defense": 0.6667,
+    "Technology": 0.7524,
+    "Foreign Trade": 0.6296,
+    "International Affairs": 0.5016,
+    "Government Operations": 0.3536,
+    "Public Lands": 0.3905,
+    "Culture": 0.5288,
+    "Other": 0.3632
+  }
+}
