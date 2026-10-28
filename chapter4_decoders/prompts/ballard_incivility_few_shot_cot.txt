@@ -1,0 +1,54 @@
+# ballard_incivility -- few-shot chain-of-thought prompt
+# Identical in all fifteen few shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to classify tweets from members of the US Congress as either CIVIL or UNCIVIL.
+
+A tweet is UNCIVIL if it contains any of the following:
+1. Name-calling, mockery, sarcasm, or character assassination
+2. Spin or misrepresentative exaggeration
+3. Emotionality or digital stridency
+4. Conspiracy theory
+
+A tweet is CIVIL if it does not contain any of the above. Note that strong policy disagreement, criticism of legislation, or negative characterizations of policy outcomes are NOT uncivil unless they involve personal attacks, mockery, or deliberate distortion.
+
+Here are some examples: 
+         Text: Rick Santorum has said many dumb things but I think this one may rank in the top 10. So proud my state booted him out of office by 20 points. 
+         Reasoning: The tweet calls a named politician's statements "dumb things" and gloats that the state booted him out of office. This uses ridicule and derogatory characterization of an individual rather than substantive engagement, which makes it uncivil. 
+ Answer: uncivil 
+         Text: #Renewables are critical for future - #fossilfuels are finite! I applaud the President on #energy strategy that leads, not follows. #SOTU 
+         Reasoning: The tweet states a policy position on renewable energy and praises the President's energy strategy. It advocates respectfully and even commends an official, with no insulting or demeaning language, so it is civil. 
+ Answer: civil 
+         Text: Another ploy of desperate Democrats trying to change the subject from Obamacare and push populist politics ahead 
+         Reasoning: The tweet dismisses the opposing party as desperate Democrats engaged in a ploy, attributing bad faith through derogatory labeling. This contemptuous characterization of a group is uncivil. 
+ Answer: uncivil 
+         Text: Right now there are a lot of people whose rights are threatened by the Trump administration. We must work together to protect them. 
+         Reasoning: The tweet voices concern that some people's rights are threatened and calls for working together to protect them. It is critical of the administration but expressed respectfully and constructively, so it is civil. 
+ Answer: civil 
+         Text: Repeal & replace = scam & sham! Ask Trump's @GOP #WhatsYourPlan 
+         Reasoning: The tweet mocks the policy as a "scam & sham" and tags opponents derisively. The jeering, contemptuous framing attacks rather than argues, which makes it uncivil. 
+ Answer: uncivil 
+         Text: Common sense: if you are too dangerous to fly, you're too dangerous to buy weapons of war. Need bipartisan bill 2 make #NoFlyNoBuy a reality 
+         Reasoning: The tweet makes a gun-policy argument and calls for a bipartisan bill. It states a position and even seeks cooperation across parties without any insulting language, so it is civil. 
+ Answer: civil 
+         Text: Leave my family out of it Sen. McCain. Your blood relatives may approve of this Congress but mine are smarter than that 
+         Reasoning: The tweet tells Senator McCain to leave the speaker's family alone and jabs that the speaker's relatives are smarter than that. The personal, belittling dig at the senator makes it uncivil. 
+ Answer: uncivil 
+         Text: #GOP budget - ends Medicare guarantee for seniors and slashes care for seniors in nursing homes. 
+         Reasoning: The tweet criticizes a budget proposal for ending the Medicare guarantee and cutting care for seniors. It is a pointed but substantive policy criticism with no personal insults or demeaning language, so it is civil. 
+ Answer: civil 
+         Text: Dewhurst doubling-down on deceiving TX voters w/ another shameless distortion of facts. Read & RT the truth: #TXSen 
+         Reasoning: The tweet accuses a named candidate of deceiving voters with a "shameless distortion of facts." Framing an opponent as shamelessly dishonest is a personal character attack, which makes it uncivil. 
+ Answer: uncivil 
+         Text: Americans suffer when members of Congress fail to respect local control, limited government, and personal freedom. #COPolitics 
+         Reasoning: The tweet argues that Americans suffer when Congress fails to respect local control, limited government, and personal freedom. It states a values-based critique in respectful terms without attacking anyone, so it is civil. 
+ 
+ Answer: civil 
+         Now classify the following tweet as 'civil' or 'uncivil'. First give your reasoning in 2-3 sentences, then give your final classification on a new line in exactly this format: 
+ Answer: civil 
+ or 
+ Answer: uncivil
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Sentence: "{text}"\n\nClassification:'

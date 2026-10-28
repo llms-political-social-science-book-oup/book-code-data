@@ -1,0 +1,61 @@
+# trubowitz_watanabe -- few-shot chain-of-thought prompt
+# Identical in all fifteen few shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to classify a news article from the         New York Times about foreign affairs according to whether it CONVEYS A GEOPOLITICAL THREAT to the         United States. The article is a short summary or lead passage, and may be from any period between         1861 and 2017.         An article CONVEYS A GEOPOLITICAL THREAT if it portrays a foreign country, regime, or actor as hostile,         aggressive, or dangerous to the United States or its allies and interests. This includes references to:         1. War, invasion, armed conflict, or military attack involving a foreign power         2. Military buildup, aggression, expansionism, or hostile threats by a foreign state         3. Subversion, terrorism, insurgency, or an adversary's hostile intentions or actions         4. Hostility or menace directed at the United States, its forces, or its allies         Answer 'No' if the article is about foreign affairs but does not convey such a threat, such as diplomacy,         cooperation, trade, alliances, cultural matters, or neutral reporting.         Answer 'Unclear' if the article is too vague or ambiguous to determine whether a geopolitical threat is conveyed.         Here are some examples: 
+         Text: TAIPEI, Taiwan, Nov. 7 -- Chinese Communist coastal artillery broke a twenty-seven-hour silence at 12:30 A. M. today. Firing fifty-five shells at the Quemoy islands in the predawn hours, the Chinese Reds once more gave notice that their... 
+         Reasoning: The article reports that Chinese Communist artillery shelled the Quemoy islands, an act of overt military aggression. It portrays a hostile foreign power using force against a defended position, which conveys a clear geopolitical threat. 
+ Answer: Yes 
+         Text: Already committed to forming the world's largest trading bloc in 1993, the 12-nation European Community took a major step toward economic unity today, agreeing to create a single currency and a regional central bank no later than 1999. 
+         Reasoning: The article describes the European Community moving toward economic unity with a single currency and a central bank. This is cooperative economic integration among allied states, not a hostile or aggressive act, so it conveys no geopolitical threat. 
+ Answer: No 
+         Text: The United States and Britain seemed last week to have settled upon a fresh approach to the Middle Eastern situation. 
+         Reasoning: The article only states that the United States and Britain have settled on a fresh approach to the Middle East, without describing any hostile actor or aggressive action. There is not enough information to tell whether a foreign threat is involved, so the case is ambiguous. 
+ Answer: Unclear 
+         Text: A suicide bomber disguised as an Israeli soldier blew himself apart in Netanya, killing 3 Israelis and wounding more than 50 with a shrapnel-packed bomb. 
+         Reasoning: The article reports a suicide bombing that killed and wounded many people. This is an act of deadly violence by a hostile actor, which conveys a clear geopolitical threat. 
+ Answer: Yes 
+         Text: WASHINGTON, June 24.--Minister Romero, who is very much interested in the postal treaty which he and Postmaster-General Vilas have signed, and which is to take effect in July, talks enthusiastically about the trade benefits it is to confer upon... 
+         Reasoning: The article concerns a postal treaty and the trade benefits it will bring to both countries. It describes friendly cooperation and mutual economic gain, not hostility, so no geopolitical threat is conveyed. 
+ Answer: No 
+         Text: PARIS, June 4 -- The conduct of Premier Khrushchev and his newest disarmament proposals were being subjected to cautious, hard-eyed appraisal in allied diplomatic circles here. 
+         Reasoning: The article notes that Khrushchev's disarmament proposals were being appraised cautiously in allied diplomatic circles, without indicating whether they signal hostility or accommodation. The framing is too tentative to judge, so whether a threat is present is unclear. 
+ Answer: Unclear 
+         Text: HONG KONG, Aug. 24--Premier Chou En-lai's demand tonight that the United Nations Security Council force the withdrawal of the United States Seventh Fleet from Formosa Strait was part of a double-barreled blast in which the Chinese Communists accused... 
+         Reasoning: The article reports the Chinese Communists demanding the withdrawal of the U.S. Seventh Fleet and launching what it calls a hostile blast against the United States. This portrays an adversary acting against U.S. interests, conveying a geopolitical threat. 
+ Answer: Yes 
+         Text: Evening, A pacific note has been issued from the Prussian Foreign Office, in which the recent note of M, MOUSTTER, the French Foreign Minister, is alluded to as highly satisfactory to the Prussian Government. 
+         Reasoning: The article describes a "pacific note" from the Prussian Foreign Office that treats the French minister's note as highly satisfactory. The tone is explicitly conciliatory and friendly, so no geopolitical threat is conveyed. 
+ Answer: No 
+         Text: The European Union needs a grand bargain to rescue itself from an accumulation of crises that threaten to blow apart its model of integration. 
+         Reasoning: The article says the European Union faces crises that "threaten to blow apart" its integration, but this refers to internal strains within the bloc rather than a foreign power menacing the United States. Because the threat language is about the EU's own cohesion, whether it counts as a geopolitical threat is ambiguous. 
+ Answer: Unclear 
+         Text: MIAMI, Sept. 5 -- Gen. Laurence S. Kuter, until recently the Air Force commander in the Far East, described the crisis in Laos today as characteristic of Communist probing efforts throughout Asia. 
+         Reasoning: The article reports a U.S. commander characterizing the crisis in Laos as part of Communist probing efforts across Asia. It frames a hostile adversary actively pressing in the region, which conveys a geopolitical threat. 
+ Answer: Yes 
+         Text: LEAD: Foreign Minister Eduard A. Shevardnadze told the Soviet legislature today that the nine-year Soviet military role in Afghanistan had violated Soviet law and international norms of behavior. 
+         Reasoning: The article reports a Soviet foreign minister conceding that the Soviet military role in Afghanistan had violated Soviet law and international norms. This is a self-critical admission rather than a portrayal of a foreign power threatening the United States, so no threat is conveyed. 
+ Answer: No 
+         Text: The office of Prime Minister Benjamin Netanyahu rejected criticism of Israel's plans from President Obama and others. 
+         Reasoning: The article only states that Netanyahu's office rejected criticism of Israel's plans from President Obama, describing diplomatic friction without any hostile or aggressive action. There is too little detail to determine whether a geopolitical threat is present, so the case is ambiguous. 
+ Answer: Unclear 
+         Text: Prime Minister Wen Jiabao defended a newly approved law that could authorize a military attack to stop Taiwan from pursuing independence. 
+         Reasoning: The article reports that China approved a law authorizing a military attack to stop Taiwan from pursuing independence. It describes an explicit threat of military force, which conveys a clear geopolitical threat. 
+ Answer: Yes 
+         Text: Poland, forever at odds with herself and her place on the map, appears more at peace than she has been since World War II. 
+         Reasoning: The article characterizes Poland as more at peace than at any time since World War II. It explicitly conveys stability and the absence of conflict, so no geopolitical threat is present. 
+ Answer: No 
+         Text: Now that Jean-Claude Duvalier has been forced by the Haitian people to abandon his inherited dictatorship, the United States has an opportunity to improve its policy toward Haiti and help the junta that controls it. 
+         Reasoning: The article frames the fall of Duvalier as an opportunity for the United States to improve its policy toward Haiti, mentioning the former dictatorship and a controlling junta but not portraying an active foreign threat. Because it is framed around policy opportunity rather than menace, whether a threat is conveyed is ambiguous. 
+ 
+ Answer: Unclear 
+         Now classify the following article as 'Yes', 'No', or 'Unclear'. First give your reasoning in 2-3 sentences, then give your final classification on a new line in exactly this format: 
+ Answer: Yes 
+ or 
+ Answer: No 
+ or 
+ Answer: Unclear
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Sentence: "{text}"\n\nClassification:'

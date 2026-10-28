@@ -1,0 +1,44 @@
+# heseltine -- few-shot chain-of-thought prompt
+# Identical in all fifteen few shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to classify whether a political text         conveys NEGATIVE messaging or not. The text is a tweet from a politician (in the United States, Germany,         Chile, or Italy) or a U.S. news-media article, and it may be in English, German, Spanish, or Italian --         judge the messaging regardless of language.         A text contains NEGATIVE messaging if it expresses negativity -- for example, criticism, attacks, blame,         complaints, outrage, or other hostile or disapproving language toward a person, group, party, policy, or         event. A text is NOT NEGATIVE if its messaging is neutral (e.g., factual or informational) or positive         (e.g., praise, support, celebration, or good news).         Classify the text as 'Negative' or 'Not negative'.         Here are some examples: 
+         Text: On @570KLIF: Courts have ruled that #POTUS has abused his executive authority time and time again. 
+         Reasoning: The tweet criticizes the President, asserting that courts have repeatedly found he "abused his executive authority." This is a clear attack on a political figure, so it conveys negative messaging. 
+ Answer: Negative 
+         Text: Big news #KCMO will host the 2019 USA Gymnastics Championships for the first time since 1987 
+         Reasoning: The tweet shares upbeat news that the city will host a national gymnastics championship for the first time since 1987. The celebratory, good-news tone contains no negativity. 
+ Answer: Not negative 
+         Text: RT @SenBooker: .@CoryBooker slams Trump's 'all-out assault' on LGBTQ Americans: 
+         Reasoning: The tweet amplifies a senator who "slams" what he calls an "all-out assault" on LGBTQ Americans. The hostile, accusatory framing toward the administration is negative messaging. 
+ Answer: Negative 
+         Text: The fight against HIV/AIDS must continue. Prevention + care will help create #healthiestgeneration ever #WAD2014 
+         Reasoning: Although the tweet mentions the "fight" against HIV/AIDS, its message is hopeful and constructive -- prevention and care will help create the healthiest generation ever. It promotes a positive cause rather than attacking anyone, so it is not negative. 
+ Answer: Not negative 
+         Text: Der zuständige Minister fordert bessere Bedingungen oder Bezahlung, wäre sein Job das JETZT zu tun. Stattdessen: Personalbemessung vertagt. 
+         Reasoning: The German tweet criticizes the responsible minister for failing to act -- noting that instead of doing his job now, the staffing decision was postponed. This reproachful tone toward a politician is negative messaging. 
+ Answer: Negative 
+         Text: Wie kann man die kleinen Kneipen im ländlichen Raum erhalten? Heute diskutiere ich in Gaugrehweiler mit... 
+         Reasoning: The German tweet poses a constructive question about preserving small rural pubs and announces a discussion event. It is neutral and informational, with no negative messaging. 
+ Answer: Not negative 
+         Text: @Azkintuwe @sebastian_gray Son una vergüenza, pienses lo que pienses nadie puede negar que la extrema derecha de patria y libertad fue sádica, inhumana y aprovechadora 
+         Reasoning: The Spanish-language tweet calls the far right "una vergüenza" (a disgrace) and describes it as "sádica, inhumana y aprovechadora" (sadistic, inhuman, and exploitative). This is strongly hostile, condemnatory language, so it conveys negative messaging. 
+ Answer: Negative 
+         Text: Muy bien el Senado aprobando la ley de tenencia responsable de mascotas, 12 modificaciones q contribuyen a cuidar a nuestros fieles amigos 
+         Reasoning: The Spanish-language tweet praises the Senate ("Muy bien") for approving a responsible pet-ownership law that helps care for animals. The approving, positive tone contains no negativity. 
+ Answer: Not negative 
+         Text: Il #Senato di #Renzi riduce la #democrazia perché abolisce il #voto dei #cittadini! #Referendum #iovotoNO 
+         Reasoning: The Italian tweet attacks Renzi's Senate reform, claiming it "reduces democracy" by abolishing citizens' vote, and urges a No vote. The critical, oppositional framing is negative messaging. 
+ Answer: Negative 
+         Text: Piemonte al primo posto per la qualità delle prestazioni sanitarie - La voce di Novara 
+         Reasoning: The Italian tweet reports the positive news that Piedmont ranks first for the quality of its healthcare services. This is favorable, neutral-to-positive reporting with no negative messaging. 
+ 
+ Answer: Not negative 
+         Now classify whether the following political text conveys negative messaging. First give your reasoning in 2-3 sentences, then give your final classification on a new line in exactly this format: 
+ Answer: Negative 
+ or 
+ Answer: Not negative
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Sentence: "{text}"\n\nClassification:'

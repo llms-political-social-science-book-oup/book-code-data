@@ -1,0 +1,19 @@
+# goes_chapman -- zero-shot prompt
+# Identical in all fifteen zero shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to classify the staff-appraisal section of an IMF Article IV consultation report according to whether it PROMOTES NATURAL-RESOURCE GOVERNANCE.
+
+A staff appraisal PROMOTES natural-resource governance if it contains IMF advice, recommendations, or encouragement aimed at improving the governance, management, transparency, or reform of the country's natural-resource sector (oil, gas, mining, minerals, and other extractive industries). This includes calls to:
+1. Improve transparency or accountability in the resource sector (e.g., EITI, publishing resource contracts or revenues)
+2. Strengthen the management of natural-resource revenues or wealth (e.g., sovereign wealth or natural-resource funds, fiscal rules for resource income)
+3. Reform the legal, regulatory, or institutional framework governing extractive industries
+4. Reduce corruption or improve oversight in the natural-resource sector
+
+A staff appraisal does NOT promote natural-resource governance if it offers no such advice. Merely mentioning natural resources, oil, or mining in passing, without advice aimed at governing or reforming the sector, does NOT count as promoting governance.
+
+Does this staff appraisal promote natural-resource governance? Respond with exactly one word: YES or NO. Nothing else.
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Staff appraisal: "{text}"\n\nClassification:'

@@ -1,0 +1,18 @@
+# trubowitz_watanabe -- zero-shot prompt
+# Identical in all fifteen zero shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to classify a New York Times article excerpt according to whether it conveys a GEOPOLITICAL THREAT to the United States.
+
+A geopolitical threat is a portrayal of a foreign state or actor as hostile, aggressive, or dangerous to the United States or its interests, for example through military conflict, war, aggression, rivalry, or other security threats from abroad.
+
+Classify the excerpt as:
+Yes = it conveys a geopolitical threat (it portrays a foreign state or actor as hostile, aggressive, or dangerous).
+No = it does not convey a geopolitical threat (e.g., it describes peaceful, cooperative, or neutral relations, or is not about a foreign threat at all).
+Unclear = it is ambiguous or there is not enough information to tell.
+
+Respond with exactly one word: Yes, No, or Unclear. Nothing else.
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Article: "{text}"\n\nClassification:'

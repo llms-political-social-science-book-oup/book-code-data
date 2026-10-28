@@ -1,0 +1,19 @@
+# kostovicova_paskhalis -- zero-shot prompt
+# Identical in all fifteen zero shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to code the LEVEL OF JUSTIFICATION of a speech act using the Discourse Quality Index (DQI). A speech act states a demand or position about an issue; the level of justification measures how thoroughly the speaker gives reasons for it.
+
+The text may be in Serbian, Bosnian, or Croatian. Judge the meaning regardless of language.
+
+Assign exactly one level:
+0 = No justification. The speaker states a demand or position but gives no reason for it.
+1 = Inferior justification. A reason is given, but the link between the reason and the demand is not made or only illustrated (incomplete justification).
+2 = Qualified justification. A reason is given AND linked to the demand, so it is clear why the reason supports the conclusion (one complete justification).
+3 = Sophisticated justification. At least two complete justifications are given, either two reasons for the same demand or reasons linked to different aspects (broad, multiple complete justifications).
+
+Respond with exactly one digit: 0, 1, 2, or 3. Nothing else.
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Speech act: "{text}"\n\nLevel:'

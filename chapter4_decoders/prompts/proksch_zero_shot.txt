@@ -1,0 +1,19 @@
+# proksch -- zero-shot prompt
+# Identical in all fifteen zero shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to classify the sentiment of a paragraph from a legislative speech in the 2010 State of the European Union debate. The paragraph may be in any language; judge the sentiment regardless of language.
+
+Rate the sentiment on a 9-point scale from 1 to 9:
+1: very negative (strong criticism, conflict, opposition, or hostility)
+3: somewhat negative
+5: neutral (balanced, factual, or mixed, with no clear positive or negative sentiment)
+7: somewhat positive
+9: very positive (strong praise, support, optimism, or agreement)
+Use the even-numbered values (2, 4, 6, 8) for sentiment that falls between these anchors.
+
+Respond with exactly one number from 1 to 9. Nothing else.
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Sentence: "{text}"\n\nSentiment:'

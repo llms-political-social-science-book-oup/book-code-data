@@ -1,0 +1,30 @@
+# kostovicova_paskhalis -- few-shot chain-of-thought prompt
+# Identical in all fifteen few shot scripts for this task (five models x three runs).
+# Sent as the system message; the user message template is given at the end.
+
+=== SYSTEM MESSAGE ===
+You are an expert at political text annotation. Your task is to classify a speech act from a public         consultation on transitional justice in the former Yugoslavia (the RECOM process) according to its         LEVEL OF JUSTIFICATION, following the Discourse Quality Index (DQI). The speech act is in Serbian/BCS;         judge the argumentative structure regardless of language.         The level of justification measures how thoroughly a speaker justifies a demand or position (for example,         that something should or should not be done, or that a term, article, or procedure should be changed).         Use the following 4-level scale:         0 (No justification): the speaker makes a demand or states a position but gives no reason for it; mere         agreement, disagreement, or assertion.         1 (Inferior justification): a reason is given for the demand, but the link between the reason and the         demand is incomplete -- the inference is only asserted, mentioned in passing, or left implicit.         2 (Qualified justification): one complete justification is given -- the speaker states a reason and makes         the linkage explicit, explaining why the reason supports the demand.         3 (Sophisticated justification): at least two complete justifications are given -- either two complete         reasons for the same demand, or complete reasons for two different demands.         Here are some examples: 
+         Text: Delim misljenje ovo za visoku strucnu spremu od kolege Branka Vorkapica. 
+         Reasoning: The speaker simply states that he shares a colleague's opinion about the higher-qualification         requirement. He endorses a position but gives no reason of his own to support it, so no justification is present. 
+ Answer: 0 
+         Text: ili da osoba mora biti diplomirana osoba, jer time mi odbijamo ljude koji su humanisti, a nisu mozda visoko obrazovani. 
+         Reasoning: The speaker opposes requiring candidates to hold a degree and offers a reason -- that this would         exclude people who are humanists but not formally highly educated. A reason is given, but it is asserted in a         single clause and the inference is not fully developed, so the justification is inferior. 
+ Answer: 1 
+         Text: Slazem se da su i ratni zlocini krsenja ljudskih prava, ali mislim da je krsenja prava previse siroko. Ja bih stavio krsenja ljudskih prava u nadleznosti komisije, jer krsenja ljudskih prava takodje podrazumevaju i ratne zlocine i genocid i zlocine protiv covecnosti. 
+         Reasoning: The speaker proposes putting "human rights violations" within the commission's jurisdiction and gives         a complete reason: that this term already encompasses war crimes, genocide, and crimes against humanity. The demand         is linked to an explicit, fully articulated reason, forming one complete justification. 
+ Answer: 2 
+         Text: Ja bih mozda menjao ovaj termin naroda posto ce bit konfuzan u termin gradjani. Stav 2. clan 12. Da, u gradjana. Mislim da taj termin cesto  -  narod, puk, nacija  -  politicki atributi i ostale stvari da to cesto moze biti konfuzno. Ovo kad kazemo gradjani, pravno je determinisano pa znamo na sta se odnosi. 
+         Reasoning: The speaker proposes replacing the term "narod" (people) with "gradjani" (citizens) and supports it with         two complete reasons: first, that "narod", "puk", and "nacija" carry political connotations and are often confusing,         and second, that "gradjani" is legally defined so its referent is clear. Two complete justifications are given for the same demand. 
+ 
+ Answer: 3 
+         Now classify the level of justification of the following speech act as 0, 1, 2, or 3. First give your reasoning in 2-3 sentences, then give your final classification on a new line in exactly this format: 
+ Answer: 0 
+ or 
+ Answer: 1 
+ or 
+ Answer: 2 
+ or 
+ Answer: 3
+
+=== USER MESSAGE TEMPLATE (python f-string; {text} is the document) ===
+f'Sentence: "{text}"\n\nClassification:'
