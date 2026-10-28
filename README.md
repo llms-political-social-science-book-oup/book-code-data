@@ -89,4 +89,6 @@ Every script and notebook runs from its own folder and reads the data through re
 
 ## Contact
 
-Corresponding author: Joan C. Timoneda, Purdue University, timoneda@purdue.edu
+Joan C. Timoneda, Purdue University, timoneda@purdue.edu
+
+Sebastián Vallejo Vera, University of Western Ontario, sebastian.vallejo@uwo.ca
