@@ -1,0 +1,19 @@
+# Python 3.12 (the notebooks record 3.12.11).
+# Pinned versions are those recorded in the notebooks' environment. The others
+# are the major versions used and are approximate.
+torch==2.6.0
+transformers==5.13.1
+bitsandbytes>=0.46.1
+peft>=0.17             # approximate
+accelerate>=1.0        # approximate
+mistral-common>=1.8    # approximate; Mistral-Small QLoRA notebook only
+openai>=1.0            # approximate
+pandas>=2.0            # approximate
+numpy>=1.26            # approximate
+scikit-learn>=1.4      # approximate
+scipy>=1.12            # approximate
+statsmodels>=0.14      # approximate; Chapter 5 scripts
+openpyxl>=3.1          # approximate
+tqdm>=4.66             # approximate
+matplotlib>=3.8        # approximate
+seaborn>=0.13          # approximate
