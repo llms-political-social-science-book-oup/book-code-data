@@ -79,7 +79,7 @@ Every script and notebook runs from its own folder and reads the data through re
 ## Citation
 
 ```
-@book{timoneda_vallejovera_llms,
+@book{timoneda2027llms,
   title     = {LLMs in Political and Social Science: Principles and Applications of Transformer Models},
   author    = {Timoneda, Joan C. and Vallejo Vera, Sebasti{\'a}n},
   publisher = {Oxford University Press},
